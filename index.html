@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Minesweeper</title>
+	<link rel="stylesheet" href="style.css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"> </head>
+
+<body>
+	<div class="wrapper" id="app">
+		<div class="scroll__hidden">
+			<div class="scroll__row">
+				<div class="panel">
+					<div class="panel-block">
+						<div class="panel-block__header">
+							<h1 class="panel-block__title">Minesweeper</h1> </div>
+						<div class="panel-block__content">
+							<div class="panel-block__row">
+								<input type="text" id="w" class="input" placeholder="Width">
+								<input type="text" id="h" class="input" placeholder="Height"> </div>
+							<input type="text" id="m" class="input" placeholder="Mine count"> </div>
+						<div class="panel-block__footer">
+							<button class="btn start-btn">Start game</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="panel">
+					<div class="panel-block">
+                        <div class="panel-block__header">
+                            <div class="panel-block__row">
+                                <div class="counter-block"> <i class="fa-solid fa-flag counter-block__icon"></i>
+                                    <div class="counter-block__text flag-count">000</div>
+                                </div>
+                                <div class="counter-block"> <i class="fa-solid fa-clock counter-block__icon"></i>
+                                    <div class="counter-block__text timer">00:00</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-block__content">
+                            <div class="grid"></div>
+                        </div>
+                        <div class="panel-block__footer">
+                            <button class="btn back-btn">Back to menu</button>
+                        </div>
+                    </div>
+				</div>
+
+                <div class="panel">
+                    <div class="panel-block">
+                        <div class="panel-block__header">
+                            <h1 class="panel-block__title message__title">Victory</h1>
+                        </div>
+                        <div class="panel-block__content">
+                            <p class="panel-block__text message__text">
+                                Concratulations! You've won the game! <br>
+                                Your time: <span class="timer">00:00</span>
+                            </p>
+                        </div>
+                        <div class="panel-block__footer">
+                            <button class="btn message__close-btn">Close</button>
+                            <button class="btn game-restart-btn">Restart</button>
+                        </div>
+                    </div>
+                </div>
+			</div>
+		</div>
+
+        
+	</div>
+	<!-- Project -->
+	<script src="scripts/timer.js"></script>
+	<script src="scripts/audioManager.js"></script>
+	<script src="scripts/cell.js"></script>
+	<script src="scripts/cellView.js"></script>
+	<script src="scripts/cellNotification.js"></script>
+    <script src="scripts/gameEndNotification.js"></script>
+	<script src="scripts/minesweeper.js"></script>
+	<script src="scripts/minesweeperView.js"></script>
+	<script src="main.js"></script>
+</body>
+
+</html>
